@@ -9,7 +9,7 @@
   "author": "Jason O'Donnell",
   "license": "ISC",
   "dependencies": {
-    "got": "^11.8.1"
+    "got": "^12.0.0"
   },
   "keywords": [
     "fun",
