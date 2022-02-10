@@ -1,22 +1,16 @@
 {
   "name": "fun-responses",
-  "version": "1.3.2",
+  "version": "2.0.0",
   "description": "An API for getting pickup lines, jokes, roasts, toasts, and open-ended questions.",
   "main": "index.js",
   "scripts": {
     "test": "echo 'This does not use any scripts'"
   },
   "author": "Jason O'Donnell",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "got": "^11.8.1"
+    "got": "^11.8.3"
   },
-  "keywords": [
-    "fun",
-    "joke",
-    "pickup",
-    "line"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/void206551/fun-responses.git"
@@ -24,8 +18,11 @@
   "bugs": {
     "url": "https://github.com/void206551/fun-responses/issues"
   },
-  "homepage": "https://void206551.github.io/fun-responses/",
+  "homepage": "https://voidprojects.dev/projects/fun-responses/",
   "directories": {
     "doc": "docs"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0"
   }
 }

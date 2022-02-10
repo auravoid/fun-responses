@@ -1,50 +1,26 @@
-// Joke call
+const got = require('got')
 exports.joke = async function () {
-
-    const jResponse = require('./imports/joke.js')
-
-    let resJoke = await jResponse.jRequest()
-
-    return resJoke
-
+    const {body} = await got("https://api.voidprojects.dev/api/joke")
+    let {data} = JSON.parse(body)
+    return data
 }
-
-// Pickup line call
 exports.pickup = async function () {
-
-    const pResponse = require('./imports/pickup.js')
-
-    let resPick = await pResponse.pRequest()
-
-    return resPick
+    const {body} = await got("https://api.voidprojects.dev/api/pickup")
+    let {data} = JSON.parse(body)
+    return data
 }
-
-// Topic call
 exports.topic = async function () {
-
-    const tResponse = require('./imports/topic.js')
-
-    let resTopic = await tResponse.tRequest()
-
-    return resTopic
+    const {body} = await got("https://api.voidprojects.dev/api/topic")
+    let {data} = JSON.parse(body)
+    return data
 }
-
-// Roast call
 exports.roast = async function () {
-
-    const rResponse = require('./imports/roast.js')
-
-    let resRoast = await rResponse.rRequest()
-
-    return resRoast
+    const {body} = await got("https://api.voidprojects.dev/api/roast")
+    let {data} = JSON.parse(body)
+    return data
 }
-
-// Toast call
 exports.toast = async function () {
-
-    const toResponse = require('./imports/toast.js')
-
-    let resToast = await toResponse.toRequest()
-
-    return resToast
+    const {body} = await got("https://api.voidprojects.dev/api/toast")
+    let {data} = JSON.parse(body)
+    return data
 }
