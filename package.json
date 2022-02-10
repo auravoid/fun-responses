@@ -23,6 +23,6 @@
     "doc": "docs"
   },
   "devDependencies": {
-    "eslint": "^7.27.0"
+    "eslint": "^8.8.0"
   }
 }
