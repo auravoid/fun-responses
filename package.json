@@ -1,28 +1,23 @@
 {
-  "name": "fun-responses",
-  "version": "2.0.0",
-  "description": "An API for getting pickup lines, jokes, roasts, toasts, and open-ended questions.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo 'This does not use any scripts'"
-  },
-  "author": "Jason O'Donnell",
-  "license": "MIT",
-  "dependencies": {
-    "got": "^11.8.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/void206551/fun-responses.git"
-  },
-  "bugs": {
-    "url": "https://github.com/void206551/fun-responses/issues"
-  },
-  "homepage": "https://voidprojects.dev/projects/fun-responses/",
-  "directories": {
-    "doc": "docs"
-  },
-  "devDependencies": {
-    "eslint": "^8.8.0"
-  }
+	"name": "fun-responses",
+	"version": "3.0.2",
+	"description": "An API for getting pickup lines, jokes, roasts, toasts, and open-ended questions.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo 'This does not use any scripts'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/auravoid/fun-responses.git"
+	},
+	"bugs": {
+		"url": "https://github.com/auravoid/fun-responses/issues"
+	},
+	"homepage": "https://auravoid.dev/",
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20221111.1",
+		"eslint": "^8.8.0",
+		"typescript": "^4.9.3",
+		"wrangler": "^2.4.4"
+	}
 }
