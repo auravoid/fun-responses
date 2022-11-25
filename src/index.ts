@@ -13,7 +13,7 @@ export default {
             status: "ok",
             error: null,
             fun: {
-              url: "https://api.new.auravoid.dev/fun/:type",
+              url: "https://api.auravoid.dev/fun/:type",
               path: "/fun/:type",
               type: ["joke", "pickup", "roast", "toast", "topic"],
             },
@@ -34,7 +34,10 @@ export default {
       case "/fun/roast":
       case "/fun/toast":
       case "/fun/topic":
-        let responses = await fetch("https://cdn.auravoid.dev/data/fun.json");
+        let responses = await fetch(
+          "https://cors.auravoid.dev/https://cdn.auravoid.dev/data/fun.json",
+          { headers: { "x-requested-with": "https://api.auravoid.dev" } }
+        );
         let data: any = await responses.json();
         let type = pathname.split("/")[2];
         return new Response(
@@ -52,7 +55,7 @@ export default {
             status: "not ok",
             error: "invalid path",
             fun: {
-              url: "https://api.new.auravoid.dev/fun/:type",
+              url: "https://api.auravoid.dev/fun/:type",
               path: "/fun/:type",
               type: ["joke", "pickup", "roast", "toast", "topic"],
             },
