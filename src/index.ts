@@ -13,7 +13,7 @@ export default {
             status: "ok",
             error: null,
             fun: {
-              url: "https://api.auravoid.dev/fun/:type",
+              url: "https://api.new.auravoid.dev/fun/:type",
               path: "/fun/:type",
               type: ["joke", "pickup", "roast", "toast", "topic"],
             },
@@ -52,7 +52,7 @@ export default {
             status: "not ok",
             error: "invalid path",
             fun: {
-              url: "https://api.auravoid.dev/fun/:type",
+              url: "https://api.new.auravoid.dev/fun/:type",
               path: "/fun/:type",
               type: ["joke", "pickup", "roast", "toast", "topic"],
             },
