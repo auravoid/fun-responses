@@ -17,6 +17,14 @@ export default {
               path: "/fun/:type",
               type: ["joke", "pickup", "roast", "toast", "topic"],
             },
+            "zero-two": {
+              url: "https://api.auravoid.dev/zero-two",
+              path: "/zero-two",
+            },
+            "ai-ohto": {
+              url: "https://api.auravoid.dev/ai-ohto",
+              path: "/ai-ohto",
+            },
           }),
           jsonHeaders
         );
@@ -49,6 +57,27 @@ export default {
           }),
           jsonHeaders
         );
+      case "/zero-two":
+      case "/ai-ohto":
+        let path = pathname.split("/")[1];
+        if (path === "ai-ohto") {
+          path = "ai-ohto/gifs";
+        }
+        let images = await fetch(
+          "https://cors.auravoid.dev/https://cdn.auravoid.dev/images/" +
+            path +
+            "/index.json",
+          { headers: { "x-requested-with": "https://api.auravoid.dev" } }
+        );
+        let image: any = await images.json();
+        return new Response(
+          JSON.stringify({
+            status: "ok",
+            error: null,
+            data: image[Math.floor(Math.random() * image.length)],
+          }),
+          jsonHeaders
+        );
       default:
         return new Response(
           JSON.stringify({
@@ -58,6 +87,14 @@ export default {
               url: "https://api.auravoid.dev/fun/:type",
               path: "/fun/:type",
               type: ["joke", "pickup", "roast", "toast", "topic"],
+            },
+            "zero-two": {
+              url: "https://api.auravoid.dev/zero-two",
+              path: "/zero-two",
+            },
+            "ai-ohto": {
+              url: "https://api.auravoid.dev/ai-ohto",
+              path: "/ai-ohto",
             },
           }),
           jsonHeaders
