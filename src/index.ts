@@ -15,7 +15,7 @@ export default {
             fun: {
               url: "https://api.auravoid.dev/fun/:type",
               path: "/fun/:type",
-              type: ["joke", "pickup", "roast", "toast", "topic"],
+              type: ["joke", "pickup", "roast", "toast", "topic", "quote"],
             },
             "zero-two": {
               url: "https://api.auravoid.dev/zero-two",
@@ -33,7 +33,7 @@ export default {
           JSON.stringify({
             status: "not ok",
             error: "no type specified",
-            type: ["joke", "pickup", "roast", "toast", "topic"],
+            type: ["joke", "pickup", "roast", "toast", "topic", "quote"],
           }),
           jsonHeaders
         );
@@ -42,6 +42,7 @@ export default {
       case "/fun/roast":
       case "/fun/toast":
       case "/fun/topic":
+      case "/fun/quote":
         let responses = await fetch(
           "https://cors.auravoid.dev/https://cdn.auravoid.dev/data/fun.json",
           { headers: { "x-requested-with": "https://api.auravoid.dev" } }
@@ -86,7 +87,7 @@ export default {
             fun: {
               url: "https://api.auravoid.dev/fun/:type",
               path: "/fun/:type",
-              type: ["joke", "pickup", "roast", "toast", "topic"],
+              type: ["joke", "pickup", "roast", "toast", "topic", "quote"],
             },
             "zero-two": {
               url: "https://api.auravoid.dev/zero-two",

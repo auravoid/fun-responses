@@ -1,6 +1,6 @@
 {
 	"name": "fun-responses",
-	"version": "3.0.2",
+	"version": "3.0.3",
 	"description": "An API for getting pickup lines, jokes, roasts, toasts, and open-ended questions.",
 	"main": "index.js",
 	"scripts": {
