@@ -1,0 +1,9 @@
+services:
+  fun-responses-api:
+    build: .
+    container_name: fun-responses-api
+    ports:
+      - '7654:3000'
+    env_file:
+      - .env
+    restart: always
