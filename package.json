@@ -1,10 +1,11 @@
 {
   "scripts": {
     "dev": "bun --hot src/index.ts",
-    "build": "bun build ./src/index.ts --outdir ./dist --target=node",
+    "build": "bun build ./src/index.ts --outdir ./dist --target=bun",
     "start": "bun run dist/index.js",
-    "lint": "pnpm exec prettier . --check",
-    "format": "pnpm exec prettier . --write"
+    "typecheck": "bunx tsc --noEmit",
+    "lint": "bunx prettier . --check",
+    "format": "bunx prettier . --write"
   },
   "dependencies": {
     "axios": "^1.13.5",
@@ -15,9 +16,8 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
-    "@types/node": "^25.3.0",
+    "@types/node": "^25.5.0",
     "prettier": "^3.8.1",
-    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }
